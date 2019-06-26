@@ -1,0 +1,16 @@
+.signin-ctn {
+    min-width: 500px;
+    padding: 2rem 2rem;
+    padding-bottom: 0;
+    background-color: #ffffff;
+
+    h1 {
+        text-align: center;
+    }
+
+    .signin-opt-ctn {
+        display: flex;
+        justify-content: space-around;
+
+    }
+}

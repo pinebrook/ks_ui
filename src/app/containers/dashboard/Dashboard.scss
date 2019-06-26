@@ -1,0 +1,91 @@
+.app-layout {
+    width: 100%;
+    min-height: 100%;
+
+    .app-header-ctn {
+        background-color: transparent;
+        padding: 0;
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        position: fixed;
+        z-index: 99;
+
+        .user-list-ctn {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .user-icon-ctn {
+                width: 2rem;
+                height: 2rem;
+                background-color: #6c757d;
+                font-size: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1rem;
+                color: #ffffff;
+            }
+
+            .opt-list-ctn {
+                width: 6rem;
+                background-color: #ffffff;
+                box-shadow: 0px 5px 5px #6c757d;
+                display: none;
+                position: fixed;
+                top: 3rem;
+                right: 0;
+
+                ul {
+                    list-style-type: none;
+                    margin: 5px 0;
+                    padding: 0 0;
+                    text-align: center;
+                    line-height: 2.5rem;
+
+                    li {
+                        
+                        &:hover {
+                            background-color: #f8f9fa;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .opt-list-ctn {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    .app-content-ctn {
+        padding-top: 48px;
+
+        .breadcrumb-ctn > div {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .app-view-ctn {
+
+            .app-view-col-ctn {
+
+                .app-view-bg-ctn {
+
+                }
+            }
+
+        }
+    }
+
+}

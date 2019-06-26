@@ -1,0 +1,60 @@
+.post-ctn {
+    width: 100%;
+    display: flex;
+
+    .post-meta-ctn {
+        width: 75%;
+
+        .post-info-ctn {
+            display: flex;
+
+            h3 {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-left: 0;
+
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            span.category {
+                font-weight: bold;
+            }
+
+            span.author {
+                color: #6c757d;
+            }
+
+            .ant-divider, .ant-divider-vertical {
+                height: 1.2em;
+            }
+
+        }
+
+        .post-time-ctn {
+            display: flex;
+            align-items: center;
+
+            span.create {
+                color: #6c757d;
+                font-size: .8em;
+            }
+
+            span.update {
+                color: #6c757d;
+                font-size: .8em;
+            }
+        }
+    }
+
+    .post-action-ctn {
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+}

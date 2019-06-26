@@ -1,0 +1,92 @@
+{
+    "profile": {
+        "sections": [
+            {
+                "secType": "summary",
+                "secTitle": "Summary",
+                "descriptions": [
+                    "description1",
+                    "description2"
+                ]
+            },
+            {
+                "secType": "workExps",
+                "secTitle": "Working Experience",
+                "secContent": [
+                    {
+                        "company": "Bloomberg LLC",
+                        "time": "01/2019 - Present",
+                        "title": "MEAN Stack Developer",
+                        "descriptions": [
+                            "test1",
+                            "test2"
+                        ]
+                    },
+                    {
+                        "company": "United Nations",
+                        "time": "08/2017 - 12/2018",
+                        "title": "MEAN Stack Developer",
+                        "descriptions": [
+                            "test1",
+                            "test2"
+                        ]
+                    },
+                    {
+                        "company": "Gridology Education Tech",
+                        "time": "02/2017 - 08/2017",
+                        "title": "Intern Front-end Developer",
+                        "descriptions": [
+                            "test1",
+                            "test2"
+                        ]
+                    },
+                    {
+                        "company": "Bank of Communications",
+                        "time": "07/2013 - 05/2014",
+                        "title": "Software Engineer",
+                        "descriptions": [
+                            "test1",
+                            "test2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "secType": "projects",
+                "secTitle": "Projects",
+                "secContent": [
+                    {
+                        "projectName": "Blog",
+                        "role": "Owner",
+                        "time": "01/2019 - 02/2019",
+                        "descriptions": []
+                    }
+                ]
+            },
+            {
+                "secType": "educations",
+                "secTitle": "Education",
+                "secContent": [
+                    {
+                        "school": "University of Delaware",
+                        "degree": "Master of Science",
+                        "time": "02/2015 - 12/2016",
+                        "courseWorks": [
+                            "test1",
+                            "test2"
+                        ]
+                    },
+                    {
+                        "school": "Jilin University",
+                        "degree": "Bachelor of Engineer",
+                        "time": "09/2009 - 06/2013",
+                        "courseWorks": [
+                            "test1",
+                            "test2"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

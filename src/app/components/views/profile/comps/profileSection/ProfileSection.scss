@@ -1,0 +1,27 @@
+.sec-content-ctn {
+    display: flex;
+
+    div.sec-content-title-ctn {
+        width: 30%;
+
+        h4 {
+            font-size: .8rem;
+        }
+
+        h5 {
+            font-size: .7rem;
+        }
+
+        p {
+            font-size: .7rem;
+        }
+    }
+
+    div.sec-content-divider-ctn {
+        padding: 0 10px;
+
+        .sec-content-divider-vertical {
+            height: 100%;
+        }
+    }
+}

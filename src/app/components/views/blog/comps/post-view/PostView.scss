@@ -1,0 +1,19 @@
+.post-view-ctn {
+    padding: 0 20px;
+
+    .title-ctn {
+        display: flex;
+        align-items: center;
+        
+        span {
+            font-size: 3rem;
+            color: #000000;
+            margin-right: 1rem;
+        }
+    }
+    
+    .content-ctn {
+        padding-top: 0;
+    }
+}
+

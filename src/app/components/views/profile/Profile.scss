@@ -1,0 +1,37 @@
+.profile-ctn {
+    width: 100%;
+
+    .no-res-title {
+        text-align: center;
+    }
+
+    .section-ctn {
+        margin-top: 20px;
+    }
+
+    @keyframes stepperMove {
+        from {
+            right: 0;
+        }
+        to {
+            right: 60px;
+        }
+      }
+
+    .stepper-ctn {
+        position: fixed;
+        right: -145px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: right .5s;
+        -moz-transition: right .5s; /* Firefox 4 */
+        -webkit-transition: right .5s; /* Safari & Chrome */
+        -o-transition: right .5s; /* Opera */
+
+        &:hover {
+            right: 0px;
+        }
+    }
+
+
+}
