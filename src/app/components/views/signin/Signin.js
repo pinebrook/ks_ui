@@ -71,7 +71,7 @@ class SigninForm extends React.Component {
 								Sign In
 							</Button>
 							<Button type="default" className="login-form-button">
-								<Link to='/'>Back</Link>
+								<Link to='/'>Home</Link>
 							</Button>
 						</div>
 					</Form.Item>

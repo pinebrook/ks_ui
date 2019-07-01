@@ -15,9 +15,10 @@ const app = express();
 const store = initStore();
 const statsFile = path.resolve('./dist/client/loadable-stats.json');
 const helmet = Helmet.renderStatic();
+const PORT = process.env.MODE === 'prod' ? '9000' : '9001';
 
 const htmlTemplate = (reactDom, reduxState, helmet, styleTags, scriptTags) => {
-    return `
+	return `
         <!DOCTYPE html>
         <html>
         <head>
@@ -41,43 +42,44 @@ const htmlTemplate = (reactDom, reduxState, helmet, styleTags, scriptTags) => {
 app.use('/static', express.static(path.resolve(__dirname, '../../dist/client')));
 
 app.get('/*', (req, res) => {
-    const context = {};
-    const extractor = new ChunkExtractor({
-        statsFile,
-        entrypoints: ['client']
-    });
+	const context = {};
+	const extractor = new ChunkExtractor({
+		statsFile,
+		entrypoints: ['client']
+	});
 
-    const jsx = extractor.collectChunks(
-        <ReduxProvider store={store}>
-            <StaticRouter context={context} location={req.url}>
-                <App />
-            </StaticRouter>
-        </ReduxProvider>
-    );
-    const reactDom = renderToString(jsx);
+	const jsx = extractor.collectChunks(
+		<ReduxProvider store={store}>
+			<StaticRouter context={context} location={req.url}>
+				<App />
+			</StaticRouter>
+		</ReduxProvider>
+	);
+	const reactDom = renderToString(jsx);
 
-    const reduxState = store.getState();
-    const styleTags = extractor.getStyleTags();
-    const scriptTags = extractor.getScriptTags();
+	const reduxState = store.getState();
+	const styleTags = extractor.getStyleTags();
+	const scriptTags = extractor.getScriptTags();
 
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end(htmlTemplate(reactDom, reduxState, helmet, styleTags, scriptTags));
+	res.writeHead(200, {'Content-Type': 'text/html'});
+	res.end(htmlTemplate(reactDom, reduxState, helmet, styleTags, scriptTags));
 });
 
-app.listen(9001, '0.0.0.0', (error) => {
-    if(error) {
-        console.log(error);
-    } else {
-        console.log(`
- █░█ █▀▀█ █░░ █▀▀ ░▀░ █▀▀▄ █▀▀█ 
- █▀▄ █▄▄█ █░░ █▀▀ ▀█▀ █░░█ █░░█ 
- ▀░▀ ▀░░▀ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀░ ▀▀▀▀ 
- 
- 　  █▀▀ █▀▀█ █▀▀█ █▀▀ █▀▀ 
- 　  ▀▀█ █░░█ █▄▄█ █░░ █▀▀ 
- 　  ▀▀▀ █▀▀▀ ▀░░▀ ▀▀▀ ▀▀▀
 
- App is running on PORT 9001 in SSR mode
-        `);
-    }
+app.listen(PORT, 'localhost', (error) => {
+	if(error) {
+		console.log(error);
+	} else {
+		console.log(`
+	█░█ █▀▀█ █░░ █▀▀ ░▀░ █▀▀▄ █▀▀█ 
+	█▀▄ █▄▄█ █░░ █▀▀ ▀█▀ █░░█ █░░█ 
+	▀░▀ ▀░░▀ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀░ ▀▀▀▀ 
+
+		█▀▀ █▀▀█ █▀▀█ █▀▀ █▀▀ 
+		▀▀█ █░░█ █▄▄█ █░░ █▀▀ 
+		▀▀▀ █▀▀▀ ▀░░▀ ▀▀▀ ▀▀▀
+
+	App is running on PORT ${PORT} in SSR mode
+		`);
+	}
 });

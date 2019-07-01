@@ -7,10 +7,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 const indexFile = path.resolve(__dirname, '../src/server/server.js');
-const environment = require(path.resolve(__dirname, '../src/environments/environment.dev'));
+const environment = require(path.resolve(__dirname, '../src/environments/environment.prod'));
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	target: 'node',
 	externals: [nodeExternals()],
 	entry: {

@@ -30,7 +30,7 @@ class PostsList extends Component {
 	}
 
 	componentDidMount() {
-		this.fetAllPosts();
+		this.fetchAllPosts();
 
 		const isSignin = localStorage.getItem('isSignin') === 'true' ? true : false;
 		this.setState({
@@ -38,7 +38,7 @@ class PostsList extends Component {
 		});
 	}
 
-	fetAllPosts() {
+	fetchAllPosts() {
 		axios.get(`${_APIPUBBASE_}/posts`)
 			.then(rsp => {
 				if(rsp.data.success) {
@@ -57,7 +57,7 @@ class PostsList extends Component {
 		axios.delete(`${_APICREDBASE_}/posts/delete/${postId}`)
 			.then(rsp => {
 				if(rsp.data.success) {
-					this.fetAllPosts();
+					this.fetchAllPosts();
 				}
 			})
 			.catch(rspError => {
