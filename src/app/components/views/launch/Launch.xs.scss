@@ -1,0 +1,21 @@
+@media only screen and (max-width : 479px) {
+
+    h1 {
+        font-size: 2rem !important;
+        letter-spacing: 3px !important;
+
+        p {
+            font-size: .8rem !important;
+        }
+    }
+
+    .opt-ctn {
+        justify-content: space-around !important;
+        
+        button {
+            padding: 10px 10px !important;
+            font-size: 1.3rem !important;
+        }
+    }
+
+}
