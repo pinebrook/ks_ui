@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import './Launch.scss';
+import './Launch.xs.scss';
+import './Launch.sm.scss';
+import './Launch.md.scss';
+import './Launch.lg.scss';
 
 class Launch extends Component {
 
