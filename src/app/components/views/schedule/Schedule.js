@@ -52,7 +52,7 @@ class Schedule extends Component {
 	render() {
 		const { events } = this.props;
 		return (
-			<div>
+			<div className="schedule-ctn">
 				<Calendar
 					selectable
 					localizer={localizer}
