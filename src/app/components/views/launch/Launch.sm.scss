@@ -1,0 +1,25 @@
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+
+    h1 {
+        top: 10% !important;
+        font-size: 2.5rem !important;
+
+        p {
+            font-size: 1rem !important;
+            letter-spacing: 5px !important;
+        }
+    }
+
+    .opt-ctn {
+        justify-content: space-around !important;
+        align-items: center !important;
+        
+        button {
+            font-size: 1.5rem !important;
+            transform: translateY(100%) !important;
+            
+        }
+    }
+
+}
+
