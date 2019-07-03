@@ -16,6 +16,7 @@ class Dashboard extends Component {
 		super(props);
 
 		this.state = {
+			loaded: false,
 			isSignin: false,
 			menuItems: [
 				{
@@ -69,6 +70,7 @@ class Dashboard extends Component {
 	componentDidMount() {
 		const isSignin = localStorage.getItem('isSignin') === 'true' ? true : false;
 		this.setState({
+			loaded: true,
 			isSignin: isSignin
 		});
 	}
