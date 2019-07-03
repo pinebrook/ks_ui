@@ -20,7 +20,7 @@ class Dashboard extends Component {
 			isSignin: false,
 			menuItems: [
 				{
-					name: '个人简介',
+					name: '简介',
 					path: ''
 				}, 
 				{

@@ -42,7 +42,7 @@ class PostCreate extends Component {
 			if (!validError) {
 
 				const newPost = Object.assign({}, values, {
-					author: 'KaiZhang'
+					author: 'pinebrook'
 				});
 
 				axios.post(`${_APICREDBASE_}/posts/create`, {post: newPost})

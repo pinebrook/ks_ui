@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 
 const breadcrumbNameMap = {
-	'/dashboard': '个人简介',
+	'/dashboard': '简介',
 	'/dashboard/schedule': '留言',
 	'/dashboard/blog': '笔记列表',
 	'/dashboard/blog/view': '笔记',

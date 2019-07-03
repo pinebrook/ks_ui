@@ -109,8 +109,8 @@ class Launch extends Component {
 					<h1>
 						KaleidoSpace
 					</h1>
-					<p>My tech blog, visit <span>
-						<a href="https://github.com/pinebrook" target="_blank" rel="noopener noreferrer">repo</a></span> for detail
+					<p>记录技术日常<span>
+						<a href="https://github.com/pinebrook" target="_blank" rel="noopener noreferrer"> github </a></span> 
 					</p>
 				</div>
 				<div className="opt-ctn">
