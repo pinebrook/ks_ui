@@ -1,9 +1,9 @@
 .post-ctn {
-    width: 100%;
     display: flex;
+    width: 100%;
 
     .post-meta-ctn {
-        width: 75%;
+        flex-basis: 75%;
 
         .post-info-ctn {
             display: flex;
@@ -51,7 +51,7 @@
     }
 
     .post-action-ctn {
-        width: 25%;
+        flex-basis: 25%;
         display: flex;
         justify-content: space-around;
     }

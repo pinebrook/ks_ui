@@ -2,7 +2,7 @@
     display: flex;
 
     div.sec-content-title-ctn {
-        width: 30%;
+        flex-basis: 20%;
 
         h4 {
             font-size: .8rem;
@@ -18,10 +18,16 @@
     }
 
     div.sec-content-divider-ctn {
+        flex-basis: 10%;
         padding: 0 10px;
 
         .sec-content-divider-vertical {
             height: 100%;
         }
+    }
+
+    div.sec-content-dsc-ctn {
+        flex-basis: 70%;
+
     }
 }

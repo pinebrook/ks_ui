@@ -1,0 +1,19 @@
+@media only screen and (max-width : 479px) {
+
+    .sec-content-ctn {
+        display: block;
+    
+        div.sec-content-title-ctn {
+            width: 100%;
+        }
+    
+        div.sec-content-divider-ctn {
+            display: none;
+
+        }
+    
+        div.sec-content-dsc-ctn {
+            width: 100%;
+        }
+    }
+}

@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 
 const breadcrumbNameMap = {
-	'/dashboard': 'Profile',
-	'/dashboard/schedule': 'Schedule',
-	'/dashboard/blog': 'Blog',
-	'/dashboard/blog/view': 'Post Detail',
-	'/dashboard/blog/create': 'New Post',
-	'/dashboard/blog/edit': 'Edit Post'
+	'/dashboard': '个人信息',
+	'/dashboard/schedule': '预约留言',
+	'/dashboard/blog': '文章列表',
+	'/dashboard/blog/view': '文章',
+	'/dashboard/blog/create': '新文章',
+	'/dashboard/blog/edit': '编辑文章'
 };
 
 const AppBreadCrumb = (props) => {

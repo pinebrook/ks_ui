@@ -19,16 +19,16 @@ class Dashboard extends Component {
 			isSignin: false,
 			menuItems: [
 				{
-					name: 'Profile',
+					name: '我的信息',
 					path: ''
 				}, 
 				{
-					name: 'Schedule',
-					path: 'schedule'
-				}, 
-				{
-					name: 'Blog',
+					name: '文章',
 					path: 'blog'
+				},
+				{
+					name: '留言',
+					path: 'schedule'
 				}
 			],
 			defaultMenuItemIndex: '0',
@@ -134,8 +134,8 @@ class Dashboard extends Component {
 							<ul>
 								{
 									isSignin ? 
-										<li onClick={this.clickSignOutHandler}>Sign Out</li> : 
-										<li onClick={this.clickSignInHandler}>Sign In</li>
+										<li onClick={this.clickSignOutHandler}>注销</li> : 
+										<li onClick={this.clickSignInHandler}>登录</li>
 								}
 							</ul>
 						</div>

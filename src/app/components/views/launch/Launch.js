@@ -111,8 +111,8 @@ class Launch extends Component {
 						<a href="https://github.com/pinebrook" target="_blank" rel="noopener noreferrer">repo</a></span> for detail</p>
 				</h1>
 				<div className="opt-ctn">
-					<button onClick={this.onClickEnterHandler}>Enter</button>
-					<button onClick={this.onClickSigninHandler}>Sign In</button>
+					<button onClick={this.onClickEnterHandler}>进入</button>
+					<button onClick={this.onClickSigninHandler}>登录</button>
 				</div>
 			</div>
 		);

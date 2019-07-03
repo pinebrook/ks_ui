@@ -71,6 +71,7 @@
     "antd": "^3.13.0",
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.11.0",
+    "connect-history-api-fallback": "^1.6.0",
     "html-react-parser": "^0.7.0",
     "i": "^0.3.6",
     "moment": "^2.24.0",

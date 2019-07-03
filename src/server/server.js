@@ -4,8 +4,9 @@ import path from 'path';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+import history from 'connect-history-api-fallback';
 import { Provider as ReduxProvider } from 'react-redux';
-import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server'
+import { ChunkExtractor } from '@loadable/server';
 import { Helmet } from 'react-helmet';
 
 import  App from '../app/App';
@@ -16,6 +17,7 @@ const store = initStore();
 const statsFile = path.resolve('./dist/client/loadable-stats.json');
 const helmet = Helmet.renderStatic();
 const PORT = process.env.MODE === 'prod' ? '9000' : '9001';
+const HOST = process.env.MODE === 'prod' ? '0.0.0.0' : 'localhost';
 
 const htmlTemplate = (reactDom, reduxState, helmet, styleTags, scriptTags) => {
 	return `
@@ -40,6 +42,8 @@ const htmlTemplate = (reactDom, reduxState, helmet, styleTags, scriptTags) => {
 };
 
 app.use('/static', express.static(path.resolve(__dirname, '../../dist/client')));
+
+app.use(history());
 
 app.get('/*', (req, res) => {
 	const context = {};
@@ -66,7 +70,7 @@ app.get('/*', (req, res) => {
 });
 
 
-app.listen(PORT, 'localhost', (error) => {
+app.listen(PORT, HOST, (error) => {
 	if(error) {
 		console.log(error);
 	} else {
@@ -79,7 +83,7 @@ app.listen(PORT, 'localhost', (error) => {
 		▀▀█ █░░█ █▄▄█ █░░ █▀▀ 
 		▀▀▀ █▀▀▀ ▀░░▀ ▀▀▀ ▀▀▀
 
-	App is running on PORT ${PORT} in SSR mode
+	App is running on HOST: ${HOST} & PORT: ${PORT} in SSR mode
 		`);
 	}
 });

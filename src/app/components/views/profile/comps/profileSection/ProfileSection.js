@@ -3,6 +3,7 @@ import React from 'react';
 import { Divider } from 'antd';
 
 import './ProfileSection.scss';
+import './ProfileSection.xs.scss';
 
 const ProfileSection = ({content}) => {
 	let section = content.secType === 'summary' ? (
@@ -27,7 +28,7 @@ const ProfileSection = ({content}) => {
 							<div className="sec-content-divider-ctn">
 								<Divider className="sec-content-divider-vertical" type="vertical"/>
 							</div>
-							<div>
+							<div className="sec-content-dsc-ctn">
 								<ul>
 									{
 										contentItem.descriptions ? 

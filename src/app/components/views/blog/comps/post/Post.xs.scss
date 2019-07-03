@@ -1,0 +1,35 @@
+@media only screen and (max-width : 479px) {
+
+    .post-ctn {
+        display: flex;
+    
+        .post-meta-ctn {
+            flex-basis: 75% !important;
+    
+            .post-info-ctn {
+                display: block !important;
+            }
+    
+            .post-time-ctn {
+                display:  block !important;
+
+                .time-divider {
+                    display: none;
+                }
+
+                span.create, span.update {
+                    display: block;
+                }
+            }
+        }
+    
+        .post-action-ctn {
+            flex-basis: 25% !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+    }
+}
+

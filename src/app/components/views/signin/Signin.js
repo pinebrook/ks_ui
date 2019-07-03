@@ -68,10 +68,10 @@ class SigninForm extends React.Component {
 					<Form.Item>
 						<div className="signin-opt-ctn">
 							<Button type="primary" htmlType="submit" className="login-form-button">
-								Sign In
+								登录
 							</Button>
 							<Button type="default" className="login-form-button">
-								<Link to='/'>Home</Link>
+								<Link to='/'>主页</Link>
 							</Button>
 						</div>
 					</Form.Item>

@@ -5,6 +5,7 @@ import axios from 'axios';
 import { List, Divider, Button } from 'antd';
 
 import './Post.scss';
+import './Post.xs.scss';
 
 class Post extends Component {
 	constructor() {
@@ -47,7 +48,7 @@ class Post extends Component {
 						</div>
 						<div className="post-time-ctn">
 							<span className="create">Create: {post.createTime}</span>
-							<Divider type="vertical"/>
+							<Divider className="time-divider" type="vertical"/>
 							<span className="update">Last update: {post.lastUpdateTime}</span>
 						</div>
 					</div>
