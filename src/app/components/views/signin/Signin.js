@@ -5,6 +5,8 @@ import { Form, Icon, Input, Button } from 'antd';
 import axios from 'axios';
 
 import './Signin.scss';
+import './Signin.xs.scss';
+import './Signin.sm.scss';
 
 class SigninForm extends React.Component {
 
@@ -14,7 +16,6 @@ class SigninForm extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 
 	}
-
 
 	handleSubmit(e) {
 		e.preventDefault();
@@ -71,7 +72,7 @@ class SigninForm extends React.Component {
 								登录
 							</Button>
 							<Button type="default" className="login-form-button">
-								<Link to='/'>主页</Link>
+								<Link to='/'>首页</Link>
 							</Button>
 						</div>
 					</Form.Item>

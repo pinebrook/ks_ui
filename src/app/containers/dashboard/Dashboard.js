@@ -20,11 +20,11 @@ class Dashboard extends Component {
 			isSignin: false,
 			menuItems: [
 				{
-					name: '我的信息',
+					name: '个人简介',
 					path: ''
 				}, 
 				{
-					name: '文章',
+					name: '笔记',
 					path: 'blog'
 				},
 				{

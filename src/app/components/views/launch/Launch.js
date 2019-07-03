@@ -105,11 +105,14 @@ class Launch extends Component {
 		return (
 			<div className="launch-ctn">
 				<canvas id="sky"></canvas>
-				<h1>
-					KaleidoSpace
+				<div className="title-ctn">
+					<h1>
+						KaleidoSpace
+					</h1>
 					<p>My tech blog, visit <span>
-						<a href="https://github.com/pinebrook" target="_blank" rel="noopener noreferrer">repo</a></span> for detail</p>
-				</h1>
+						<a href="https://github.com/pinebrook" target="_blank" rel="noopener noreferrer">repo</a></span> for detail
+					</p>
+				</div>
 				<div className="opt-ctn">
 					<button onClick={this.onClickEnterHandler}>进入</button>
 					<button onClick={this.onClickSigninHandler}>登录</button>

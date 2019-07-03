@@ -78,34 +78,39 @@ class PostCreate extends Component {
 
 		return (
 			<div>
-				<h3>Create New Post</h3>
+				<h3>创建新笔记</h3>
 				<Form layout={formLayout} onSubmit={this.handleSubmit} className="create-form">
-					<Form.Item label="Title" 
+					<Form.Item label="标题" 
 						{...formItemLayout}>
 						{getFieldDecorator('title', {
-							rules: [{ required: true, message: 'Enter Title' }]
+							rules: [{ required: true, message: '输入标题' }]
 						})(
-							<Input placeholder="Title" />
+							<Input placeholder="标题" />
 						)}
 					</Form.Item>
-					<Form.Item label="Category" 
+					<Form.Item label="类别" 
 						{...formItemLayout}>
 						{getFieldDecorator('category', {
-							rules: [{ required: true, message: 'Select Category' }],
+							rules: [{ required: true, message: '选择类别' }],
 							initialValue: ''
 						})(
 							<Select onChange={this.onCategoryChange}>
-								<Option value="">Category</Option>
+								<Option value="">类别</Option>
 								<Option value="html">Html</Option>
 								<Option value="style">Style</Option>
-								<Option value="es">ES</Option>
+								<Option value="js">JS</Option>
+								<Option value="frameworks">框架</Option>
+								<Option value="network">网络</Option>
+								<Option value="infra">架构</Option>
+								<Option value="deploy">部署</Option>
+								<Option value="other">其他</Option>
 							</Select>
 						)}
 					</Form.Item>
-					<Form.Item label="Content" 
+					<Form.Item label="正文" 
 						{...formItemLayout}>
 						{getFieldDecorator('content', {
-							rules: [{ required: true, message: 'Enter Content' }],
+							rules: [{ required: true, message: '输入正文' }],
 							initialValue: ''
 						})(
 							<ReactMde
@@ -117,7 +122,7 @@ class PostCreate extends Component {
 						)}
 					</Form.Item>
 					<Form.Item {...buttonItemLayout}>
-						<Button type="primary" htmlType="submit">Submit</Button>
+						<Button type="primary" htmlType="submit">提交</Button>
 					</Form.Item>
 				</Form>
 			</div>

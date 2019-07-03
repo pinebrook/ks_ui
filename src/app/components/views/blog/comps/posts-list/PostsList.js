@@ -76,7 +76,7 @@ class PostsList extends Component {
 						isSignin ? 
 							<Button type="primary">
 								<Link to={`${this.props.match.path}/create`}>
-									New
+									新笔记
 								</Link>
 							</Button> : 
 							null

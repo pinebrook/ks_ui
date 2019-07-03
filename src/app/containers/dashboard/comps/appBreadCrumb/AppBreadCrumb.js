@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 
 const breadcrumbNameMap = {
-	'/dashboard': '个人信息',
-	'/dashboard/schedule': '预约留言',
-	'/dashboard/blog': '文章列表',
-	'/dashboard/blog/view': '文章',
-	'/dashboard/blog/create': '新文章',
-	'/dashboard/blog/edit': '编辑文章'
+	'/dashboard': '个人简介',
+	'/dashboard/schedule': '留言',
+	'/dashboard/blog': '笔记列表',
+	'/dashboard/blog/view': '笔记',
+	'/dashboard/blog/create': '新笔记',
+	'/dashboard/blog/edit': '编辑笔记'
 };
 
 const AppBreadCrumb = (props) => {
@@ -34,7 +34,7 @@ const AppBreadCrumb = (props) => {
 
 	const breadCrumbItems = [(
 		<Breadcrumb.Item key="home">
-			<Link to="/dashboard" onClick={() => props.clickBreadCrumbHandler('/dashboard')}>Home</Link>
+			<Link to="/dashboard" onClick={() => props.clickBreadCrumbHandler('/dashboard')}>主页</Link>
 		</Breadcrumb.Item>
 	)].concat(extraBreadCrumbItems);
 

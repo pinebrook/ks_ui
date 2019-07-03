@@ -12,10 +12,11 @@
 
     .opt-ctn {
         justify-content: space-around !important;
-        align-items: center !important;
+        align-items: flex-start !important;
         
         button {
-            font-size: 1.5rem !important;
+            padding: 10px 20px !important;
+            font-size: 1.3rem !important;
             transform: translateY(100%) !important;
             
         }

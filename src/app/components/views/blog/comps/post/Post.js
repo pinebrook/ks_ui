@@ -47,9 +47,9 @@ class Post extends Component {
 							<span className="author">{post.author}</span>
 						</div>
 						<div className="post-time-ctn">
-							<span className="create">Create: {post.createTime}</span>
+							<span className="create">创建: {post.createTime}</span>
 							<Divider className="time-divider" type="vertical"/>
-							<span className="update">Last update: {post.lastUpdateTime}</span>
+							<span className="update">最后更新: {post.lastUpdateTime}</span>
 						</div>
 					</div>
 					{

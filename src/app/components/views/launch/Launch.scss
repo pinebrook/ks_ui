@@ -1,8 +1,13 @@
 .launch-ctn {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 
     #sky {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         overflow: hidden;
@@ -12,23 +17,26 @@
         background: linear-gradient(#00111e 30%, #033d5e);
     }
 
-    h1 {
-        position: fixed;
-        top: 30%;
-        left: 0;
-        right: 0;
-        text-align: center;
+    .title-ctn {    
+        flex-basis: 40%;
         z-index: 99;
-        color: #fff;
-        font-size: 3rem;
-        font-weight: 900;
-        text-shadow: 0 0 50px black;
-        text-transform: uppercase;
-        font-family: 'Roboto','Helvetica','Arial',sans-serif;
-        letter-spacing: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 0 50px black;
+            text-transform: uppercase;
+            font-family: 'Roboto','Helvetica','Arial',sans-serif;
+            letter-spacing: 5px;
+        }
 
         p {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: normal;
             color: #bdc3c7;
             text-transform: none;
@@ -44,21 +52,17 @@
                 }
             }
         }
+
     }
 
     .opt-ctn {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 98;
+        flex-basis: 60%;
+        z-index: 99;
         display: flex;
         justify-content: center;
         align-items: center;
         
         button {
-            margin: 20px;
             padding: 20px 50px;
             font-size: 1.5rem;
             font-weight: bold;

@@ -59,8 +59,8 @@ class PostView extends Component {
 					<Badge count={post.category} />
 				</div>
 				<div className="time-ctn">
-					<div>Create at: {post.createTime}</div>
-					<div>Last update at: {post.lastUpdateTime}</div>
+					<div>创建: {post.createTime}</div>
+					<div>最后更新: {post.lastUpdateTime}</div>
 				</div>
 				<Divider />
 				<div className="content-ctn">
