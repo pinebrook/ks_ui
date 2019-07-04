@@ -75,6 +75,10 @@ class Dashboard extends Component {
 		});
 	}
 
+	componentDidUpdate(prevProps) {
+		console.log(this.state.currentMenuItemIndex);
+	}
+
 	// event: on click menu item
 	clickMenuItemHandler(e) {
 		this.setState({

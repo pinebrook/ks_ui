@@ -46,19 +46,21 @@ const EventModal = (props) => {
 	return (
 		<div>
 			<Modal
-				title="Create Event"
+				title="预约留言"
 				visible={props.visible}
+				okText={'确认'}
+				cancelText={'取消'}
 				onOk={() => onClickOk(props.curEvent)}
 				onCancel={onClickCancel}>
 				<div>
-					<span>Start: </span>
+					<span>开始时间: </span>
 					<span>{moment(props.curEvent.start).local().format('LLL')}</span>
 				</div>
 				<div>
-					<span>End: </span>
+					<span>结束时间: </span>
 					<span>{moment(props.curEvent.end).local().format('LLL')}</span>
 				</div>
-				<strong>Description</strong>
+				<strong>详情</strong>
 				<textarea 
 					className="form-control"
 					rows="5"
