@@ -84,9 +84,14 @@ class PostEdit extends Component {
 					.then(rsp => {
 						if(rsp.data.success) {
 							this.setState({
-								tab: 'preview'
+								tab: 'preview',
+								changed: false
 							});
-
+							window.scrollTo({
+								top: 0,
+								left: 0,
+								behavior: 'smooth'
+							});
 						}
 					})
 					.catch(rspError => {
@@ -152,6 +157,7 @@ class PostEdit extends Component {
 							initialValue: ''
 						})(
 							<ReactMde
+								minEditorHeight={1000}
 								selectedTab={this.state.tab}
 								onChange={this.onEditorChange}
 								onTabChange={this.onEditorTabChange}

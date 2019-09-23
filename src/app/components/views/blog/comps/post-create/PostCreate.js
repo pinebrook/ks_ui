@@ -49,6 +49,10 @@ class PostCreate extends Component {
 					.then(rsp => {
 						if(rsp.data.success) {
 							this.props.form.resetFields();
+
+							setTimeout(() => {
+								this.props.history.push('/dashboard/blog');
+							}, 1000);
 						}
 					})
 					.catch(rspError => {
@@ -114,6 +118,7 @@ class PostCreate extends Component {
 							initialValue: ''
 						})(
 							<ReactMde
+								minEditorHeight={1000}
 								selectedTab={this.state.tab}
 								onChange={this.onEditorChange}
 								onTabChange={this.onEditorTabChange}

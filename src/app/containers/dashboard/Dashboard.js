@@ -76,7 +76,7 @@ class Dashboard extends Component {
 	}
 
 	componentDidUpdate(prevProps) {
-		console.log(this.state.currentMenuItemIndex);
+		// console.log(this.state.currentMenuItemIndex);
 	}
 
 	// event: on click menu item
@@ -88,7 +88,7 @@ class Dashboard extends Component {
 
 	// event: on click bread crumb item
 	clickBreadCrumbHandler(currentUrl) {
-		const pathName = currentUrl.split('app/')[1];
+		const pathName = currentUrl.split('dashboard/')[1];
 		this.setCurrentMenuItem(pathName);
 	}
 

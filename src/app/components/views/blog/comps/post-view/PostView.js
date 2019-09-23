@@ -3,7 +3,7 @@ import * as Showdown from 'showdown';
 import Parser from 'html-react-parser';
 import axios from 'axios';
 import moment from 'moment';
-import { Badge, Divider } from 'antd';
+import { Badge, Divider, Button } from 'antd';
 
 import './PostView.scss';
 
@@ -20,6 +20,8 @@ class PostView extends Component {
 				lastUpdateTime: ''
 			}
 		};
+
+		this.handleCilckEdit = this.handleCilckEdit.bind(this);
 	}
 
 	componentDidMount() {
@@ -42,6 +44,12 @@ class PostView extends Component {
 			});
 	}
 
+	handleCilckEdit(e) {
+		const postId = window.location.search.split('=')[1];
+		
+		this.props.history.push(`/dashboard/blog/edit/?pid=${postId}`);
+	}
+
 	render() {
 		const {post} = this.state;
 
@@ -55,8 +63,13 @@ class PostView extends Component {
 		return (
 			<div className="post-view-ctn">
 				<div className="title-ctn">
-					<span>{post.title}</span>
-					<Badge count={post.category} />
+					<div className="title-info-ctn">
+						<span>{post.title}</span>
+						<Badge count={post.category} />
+					</div>
+					<div>
+						<Button onClick={this.handleCilckEdit}>编辑</Button>
+					</div>
 				</div>
 				<div className="time-ctn">
 					<div>创建: {post.createTime}</div>

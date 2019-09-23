@@ -4,16 +4,28 @@
     .title-ctn {
         display: flex;
         align-items: center;
-        
-        span {
-            font-size: 3rem;
-            color: #000000;
-            margin-right: 1rem;
+        justify-content: space-between;
+
+        div.title-info-ctn {
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 3rem;
+                color: #000000;
+                margin-right: 1rem;
+            }
         }
+
     }
     
     .content-ctn {
         padding-top: 0;
+
+        pre {
+            background-color: #f1f2f6;
+            padding: 1rem 1rem;
+        }
     }
 }
 
