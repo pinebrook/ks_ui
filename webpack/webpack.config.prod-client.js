@@ -5,6 +5,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const indexFile = path.resolve(__dirname, '../src/client/start.js');
 const environment = require(path.resolve(__dirname, '../src/environments/environment.prod'));
@@ -77,7 +78,7 @@ module.exports = (env) => {
 					}]
 				},
 				{ 
-					test: /\.(eot|svg|ttf|woff2?|otf)$/,
+					test: /\.(eot|svg|ttf|woff2?|otf|webp)$/,
 					use: 'file-loader'
 				}
 			]
@@ -98,6 +99,9 @@ module.exports = (env) => {
 				filename: '[name].style.css'
 			}),
 			new MinifyPlugin(),
+			new CompressionPlugin({
+				test: /\.(js|css)(\?.*)?$/i
+			}),
 			new LoadablePlugin()
 		],
 		optimization: {

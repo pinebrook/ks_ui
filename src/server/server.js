@@ -19,7 +19,7 @@ const helmet = Helmet.renderStatic();
 const PORT = process.env.MODE === 'prod' ? '9000' : '9001';
 const HOST = process.env.MODE === 'prod' ? '0.0.0.0' : 'localhost';
 
-const htmlTemplate = (reactDom, reduxState, helmet, styleTags, scriptTags) => {
+const htmlTemplate = (reactDom, reduxState, helmet, styleTags, scriptTags, linkTags) => {
 	return `
         <!DOCTYPE html>
         <html>
@@ -27,7 +27,8 @@ const htmlTemplate = (reactDom, reduxState, helmet, styleTags, scriptTags) => {
             <link rel="shortcut icon" href="/static/favicon.webp" />
             ${helmet.title.toString()}
             ${helmet.meta.toString()}
-            ${helmet.link.toString()}
+			${helmet.link.toString()}
+			${linkTags}
             ${styleTags}
         </head>
         <body>
@@ -64,9 +65,10 @@ app.get('/*', (req, res) => {
 	const reduxState = store.getState();
 	const styleTags = extractor.getStyleTags();
 	const scriptTags = extractor.getScriptTags();
+	const linkTags = extractor.getLinkTags();
 
 	res.writeHead(200, {'Content-Type': 'text/html'});
-	res.end(htmlTemplate(reactDom, reduxState, helmet, styleTags, scriptTags));
+	res.end(htmlTemplate(reactDom, reduxState, helmet, styleTags, scriptTags, linkTags));
 });
 
 

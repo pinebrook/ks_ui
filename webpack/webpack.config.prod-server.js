@@ -70,7 +70,7 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(jpe?g|png|gif)$/,
+				test: /\.(jpe?g|png|gif|webp)$/,
 				use: [{
 					/* inline if smaller than 10 KB, otherwise load as a file */
 					loader: 'url-loader',
@@ -80,7 +80,7 @@ module.exports = {
 				}]
 			},
 			{ 
-				test: /\.(eot|svg|ttf|woff2?|otf)$/,
+				test: /\.(eot|svg|ttf|woff2?|otf|webp)$/,
 				use: 'file-loader'
 			}
 		]

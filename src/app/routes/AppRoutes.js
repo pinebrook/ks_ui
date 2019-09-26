@@ -6,8 +6,8 @@ import loadable from '@loadable/component';
 // import Auth from '../containers/auth/Auth';
 // import Landing from '../containers/landing/Landing';
 
-const Dashboard = loadable(() => import(/* webpackChunkName: "dashboard"*/'../containers/dashboard/Dashboard'));
-const Auth = loadable(() => import(/* webpackChunkName: "auth"*/'../containers/auth/Auth'));
+const Dashboard = loadable(() => import(/* webpackChunkName: "dashboard", webpackPrefetch: true */'../containers/dashboard/Dashboard'));
+const Auth = loadable(() => import(/* webpackChunkName: "auth", webpackPrefetch: true*/'../containers/auth/Auth'));
 const Landing = loadable(() => import(/* webpackChunkName: "landing"*/'../containers/landing/Landing'));
 
 const AppRoutes = () => (
